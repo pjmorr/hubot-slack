@@ -14,9 +14,7 @@
      implied.  See the License for the specific language governing
      permissions and limitations under the License.
 
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+--><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
 
@@ -34,7 +32,7 @@
   </description>
 
   <properties>
-  </properties>
+  <fabric8.maven.plugin.version>3.5.25</fabric8.maven.plugin.version></properties>
 
   <build>
     <resources>
@@ -58,6 +56,16 @@
         <groupId>io.fabric8</groupId>
         <artifactId>fabric8-maven-plugin</artifactId>
         <version>${fabric8.maven.plugin.version}</version>
+      
+        <configuration>
+          <resources>
+            <labels>
+              <all>
+                <space>test-monitoring</space>
+              </all>
+            </labels>
+          </resources>
+        </configuration>
       </plugin>
     </plugins>
   </build>
